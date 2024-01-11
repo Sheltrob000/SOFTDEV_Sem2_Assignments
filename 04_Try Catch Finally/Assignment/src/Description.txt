@@ -1,3 +1,3 @@
-Create an application that reads in two integers from the user and stores them in variables
+    `Create an application that reads in two integers from the user and stores them in variables
 
 Then divide them in such a way that dividing by zero won't crash the program.  Use try catch blocks.  
