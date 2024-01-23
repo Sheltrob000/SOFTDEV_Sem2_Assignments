@@ -1,0 +1,1 @@
+Make Property implement the isEqualTo method in the notes
