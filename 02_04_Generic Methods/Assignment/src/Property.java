@@ -38,7 +38,7 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
 
     @Override
     public boolean isEqual(Property<T> other) {
-        return false; // TODO: Fix this by actually implementing the code
+        return isEqual(other);
     }
 
     @Override
@@ -48,20 +48,20 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
 
     @Override
     public boolean isGreaterThanOrEqual(Property<T> other) {
-        // TODO Auto-generated method stub
-        // You already have an isGreaterThan method
-        // You already have an isEqual method
-        // Use logical or (||) and return the result.
-        throw new UnsupportedOperationException("Unimplemented method 'isGreaterThanOrEqual'");
+        if (t.compareTo(other.t) == 1 || isEqual(other)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
     public boolean isLessThanOrEqual(Property<T> other) {
-        // TODO Auto-generated method stub
-        // You already have an isLessThan method
-        // You already have an isEqual method
-        // Use logical or (||) and return the result.
-        throw new UnsupportedOperationException("Unimplemented method 'isLessThanOrEqual'");
+        if (t.compareTo(other.t) == -1 || isEqual(other)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
