@@ -37,9 +37,12 @@ public class App {
     // TODO: write a function called lawOfCosinesAngle
     public static Function<Double, Function<Double, Function<Double, Double>>> lawOfCosinesAngleC = (
             a) -> (b) -> (c) -> {
-
-                //angleC = acos((c^2 - a^2 - b^2) / (-2ab))
-
+                double a2 = a * a;
+                double b2 = b * b;
+                double c2 = c * c;
+                
+                double angleC = Math.acos((c2 - a2 - b2) / (-2 * a * b));
+                return angleC;
             };
 
 }
