@@ -11,6 +11,11 @@ public class App {
         };
 
         CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> randoGenerator.apply(0, 10));
+        CompletableFuture<Void> todouble = future.thenAccept(s -> {
+            System.out.println(s.doubleValue());
+        });
+
+
 
         System.out.println(future.get());
     }
